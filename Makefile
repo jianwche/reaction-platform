@@ -31,7 +31,7 @@ REQUIRED_SOFTWARE=docker docker-compose git node yarn
 # Projects will be started in this order
 define reaction-repos
 git@github.com:/reactioncommerce/reaction-hydra.git,reaction-hydra,master \
-git@github.com:/reactioncommerce/reaction.git,reaction,master \
+git@github.com:jianwche/reaction.git,reaction,master \
 git@github.com:/reactioncommerce/reaction-next-starterkit.git,reaction-next-starterkit,master
 endef
 REACTION_PROJECTS=$(foreach rr,$(reaction-repos),$(shell echo $(rr) | cut -d , -f 2))
